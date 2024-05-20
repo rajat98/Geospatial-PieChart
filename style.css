@@ -1,0 +1,94 @@
+path {
+    stroke: white;
+    stroke-width: 0.25px;
+    /*fill: grey;*/
+}
+
+circle {
+    fill: white;
+    stroke: black;
+    stroke-width: 1px;
+}
+
+.description {
+    padding: 0 350px;
+}
+
+#svg-container {
+    margin: 15% 0 0 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+#svg1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+#svg1_header {
+    text-align: center;
+    position: absolute;
+    top: -15%;
+    left: 45%;
+    z-index: 1;
+}
+
+#svg2-wrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 2;
+}
+
+#svg2_header {
+    text-align: center;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    font-weight: bold;
+    z-index: 2;
+}
+
+#svg3-wrapper {
+    position: absolute;
+    top: 8%;
+    left: 95%;
+    z-index: 2;
+    width: 30%;
+    height: 70%;
+    overflow-y: scroll;
+    border: 1px solid black;
+    background-color: #dfe6e6;
+    padding: 10px 10px;
+    border-radius: 0 0 20px 20px;
+}
+
+#svg3_header {
+    padding: 10px;
+    margin: 4px;
+    text-align: center;
+    position: absolute;
+    top: 3%;
+    left: 94.7%;
+    border: 1px solid black;
+    width: 30%;
+    /*height: 100%; */
+    z-index: 2;
+    border-radius: 20px 20px 0 0;
+}
+
+#svg2_header, #svg3_header, #svg3-wrapper {
+    visibility: hidden;
+}
+
+.enlarged {
+    width: 32px;
+    height: 32px;
+    transition: 500ms;
+    filter: brightness(110%) saturate(140%);
+    transform-origin: center;
+}

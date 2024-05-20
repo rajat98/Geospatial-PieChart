@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset="UTF-8">
+    <title>Homework #5: Custom Visualization Design - CSE 578 - Spring 2024</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+
+
+<h1 class="text-center">Homework #5: Custom Visualization Design</h1>
+<h3 class="text-center">Rajat Pawar - rpawar9@asu.edu</h3>
+<hr>
+<div>
+    <div class="description">
+        <h1 align="center">Biodiversity Visualization in State Parks</h1>
+        <br>
+        <p><b>Description:</b> This custom visualization depicts the biodiversity of state parks across the US. Each
+            park is represented by a pine tree marker on a US map, with the size of the pine tree correlating to the
+            area of the park.
+        </p>
+        <p><b>Marks:</b>
+        <ol>
+            <li>Pine tree markers represent each state park on the US map.</li>
+            <li>Donut chart segments represent different attributes (order, family, category) of organisms within a
+                selected park.
+            </li>
+        </ol>
+        </p>
+        <p><b>Channels:</b></p>
+        <ol>
+            <li>
+                Position on the map indicates the geographic location of each state park.
+            </li>
+            <li>Size of the pine tree markers encodes the area of each park.</li>
+            <li>Color of the donut chart segments can be used to distinguish different categorical values of order,
+                family and category attributes
+            </li>
+            <li>Text: Displays the acronym of the state name inside the boundary of each state, providing additional
+                information to users.
+            </li>
+        </ol>
+        <p>
+            <b>Interactions:</b>
+        <ol>
+            <li>Hovering over a state on the map displays the full name of the state, providing users with additional
+                context and information about the location they are interacting with.
+            </li>
+            <li>On hovering over a park, it enlarges to indicate selection and displays the park's name.
+            <li>Clicking on a park reveals a donut chart illustrating the distribution of organisms by order, family,
+                and
+                category within that park.
+            <li>The donut chart is interactive, allowing users to hover over segments to view percentages and names of
+                attributes.
+            <li>
+                Clicking on segments of donut charts displays all organisms belonging to the selected attribute within
+                the park.
+        </ol>
+        </p>
+        <p><b>Category:</b> Combinatorial
+            <br><b>Explanation:</b> This visualization falls into the combinatorial category because it combines
+            multiple established data visualization techniques (geographical mapping, symbol size encoding, interactive
+            hover and click functionality, donut chart representation) to effectively convey complex biodiversity
+            information. It integrates these techniques seamlessly to provide users with an interactive and informative
+            experience, making it a clear use case for custom visualization.</p>
+
+        <b>Attributes visualized:</b>
+        <ol>
+            <li>Longitude and Latitude</li>
+            <li>State</li>
+            <li>Acres</li>
+            <li>Park Name</li>
+            <li>Category</li>
+            <li>Order</li>
+            <li>Family</li>
+            <li>Common Names</li>
+        </ol>
+    </div>
+</div>
+
+<div id="svg-container" class="container">
+    <div id="svg1-wrapper">
+        <svg id="svg"></svg>
+        <u><h2 id="svg1_header" align="center">National Parks distribution across the US</h2></u>
+
+    </div>
+
+    <div id="svg2-wrapper">
+        <svg id="svg2"></svg>
+        <u>
+            <text id="svg2_header">SVG 2</text>
+        </u>
+
+    </div>
+    <div id="list-wrapper">
+        <u><h6 id="svg3_header">SVG 3</h6></u>
+        <div id="svg3-wrapper">
+            <p id="svg3p"></p>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
